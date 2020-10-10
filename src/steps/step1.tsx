@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
-import { Flex, Box, Image } from 'rebass'
-import BigButton from '../components/BigButton'
-import Heading from '../components/Topic'
-import InputField from '../components/InputField'
-import lang from '../resources/lang.json'
-import config from '../config.json'
-import { observer } from 'mobx-react-lite'
-import SolarCulator from '../logic/solarculator'
+import React, { useState } from "react";
+import { Flex, Box } from "rebass";
+import BigButton from "../components/BigButton";
+import Heading from "../components/Topic";
+import InputField from "../components/InputField";
+import StepOneImage from "../components/StepOneImage";
+import lang from "../resources/lang.json";
+import config from "../config.json";
+import { observer } from "mobx-react-lite";
+import SolarCulator from "../logic/solarculator";
 
 const Step1 = observer(({ solarculator }: { solarculator: SolarCulator }) => {
-  const [selected, setSelected] = useState(0)
+  const [selected, setSelected] = useState(0);
   return (
     <>
       <Heading variation="large">{lang.step1.headline}</Heading>
@@ -20,21 +21,14 @@ const Step1 = observer(({ solarculator }: { solarculator: SolarCulator }) => {
           selected={selected}
           index={1}
           onClick={() => {
-            setSelected(1)
+            setSelected(1);
             solarculator.setPowerUsagePerYear(
-              config.defaultValues.powerUsage.germany['1PersonkWh'],
-            )
+              config.defaultValues.powerUsage.germany["1PersonkWh"]
+            );
           }}
         >
           <Box height="90%">
-            <Image
-              css={{
-                position: 'relative',
-                top: '50%',
-                transform: 'translate(0, -50%)',
-              }}
-              src="/images/OnePerson.png"
-            />
+            <StepOneImage src="/images/OnePerson.png" />
           </Box>
           <Box height="10%">{lang.step1.buttons[0]}</Box>
         </BigButton>
@@ -43,21 +37,14 @@ const Step1 = observer(({ solarculator }: { solarculator: SolarCulator }) => {
           selected={selected}
           index={2}
           onClick={() => {
-            setSelected(2)
+            setSelected(2);
             solarculator.setPowerUsagePerYear(
-              config.defaultValues.powerUsage.germany['23PersonkWh'],
-            )
+              config.defaultValues.powerUsage.germany["23PersonkWh"]
+            );
           }}
         >
           <Box height="90%">
-            <Image
-              css={{
-                position: 'relative',
-                top: '50%',
-                transform: 'translate(0, -50%)',
-              }}
-              src="/images/TwoPersons.png"
-            />
+            <StepOneImage src="/images/TwoPersons.png" />
           </Box>
           <Box height="10%">{lang.step1.buttons[1]}</Box>
         </BigButton>
@@ -66,21 +53,14 @@ const Step1 = observer(({ solarculator }: { solarculator: SolarCulator }) => {
           selected={selected}
           index={3}
           onClick={() => {
-            setSelected(3)
+            setSelected(3);
             solarculator.setPowerUsagePerYear(
-              config.defaultValues.powerUsage.germany['45PersonkWh'],
-            )
+              config.defaultValues.powerUsage.germany["45PersonkWh"]
+            );
           }}
         >
           <Box height="90%">
-            <Image
-              css={{
-                position: 'relative',
-                top: '50%',
-                transform: 'translate(0, -50%)',
-              }}
-              src="/images/FourPersons.png"
-            />
+            <StepOneImage src="/images/FourPersons.png" />
           </Box>
           <Box height="10%">{lang.step1.buttons[2]}</Box>
         </BigButton>
@@ -89,21 +69,12 @@ const Step1 = observer(({ solarculator }: { solarculator: SolarCulator }) => {
           selected={selected}
           index={4}
           onClick={() => {
-            setSelected(4)
-            solarculator.setPowerUsagePerYear(
-              config.defaultValues.powerUsage.germany['morekWh'],
-            )
+            setSelected(4);
+            solarculator.setPowerUsagePerYear(config.defaultValues.powerUsage.germany["morekWh"]);
           }}
         >
           <Box height="90%">
-            <Image
-              css={{
-                position: 'relative',
-                top: '50%',
-                transform: 'translate(0, -50%)',
-              }}
-              src="/images/MorePersons.png"
-            />
+            <StepOneImage src="/images/MorePersons.png" />
           </Box>
           <Box height="10%">{lang.step1.buttons[3]}</Box>
         </BigButton>
@@ -114,13 +85,13 @@ const Step1 = observer(({ solarculator }: { solarculator: SolarCulator }) => {
           value={solarculator.powerUsagePerYear}
           type="number"
           onChange={(e) => {
-            setSelected(0)
-            solarculator.setPowerUsagePerYear(Number(e.target.value))
+            setSelected(0);
+            solarculator.setPowerUsagePerYear(Number(e.target.value));
           }}
-        ></InputField>
+        />
       </Box>
     </>
-  )
-})
+  );
+});
 
-export default Step1
+export default Step1;

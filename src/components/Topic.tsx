@@ -7,17 +7,16 @@ const variations = {
 };
 
 const Topic: React.FC<{
-  children: string;
   variation: "large" | "medium";
   marginTop?: string;
-}> = ({ children, marginTop, variation }) => {
+}> = ({ children, variation, marginTop }) => {
   return (
     <Heading
+      fontSize={variations[variation]}
+      marginTop={marginTop}
       textAlign="center"
       fontFamily="font"
       color="primary"
-      marginTop={marginTop}
-      fontSize={variations[variation]}
     >
       {children}
     </Heading>

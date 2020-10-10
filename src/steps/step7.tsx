@@ -28,6 +28,9 @@ function Step7() {
         {lang.step7.text}
       </Heading>
       <Heading variation="large">{lang.step7.saving}</Heading>
+      <Heading marginTop="0.5em" variation="medium">
+        {lang.step7.contact}
+      </Heading>
       <Heading variation="large" marginTop="0.5em">
         {lang.step7.amortisation}
       </Heading>
@@ -45,9 +48,6 @@ function Step7() {
           <VerticalBarSeries data={data} barWidth={2} />
         </XYPlot>
       </Box>
-      <Heading marginTop="1em" variation="medium">
-        {lang.step7.contact}
-      </Heading>
     </>
   );
 }

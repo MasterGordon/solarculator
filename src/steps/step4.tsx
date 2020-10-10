@@ -11,7 +11,7 @@ function Step4() {
       <Heading variation="medium">{lang.step4.text}</Heading>
       <Box marginTop="1em">
         <Image
-          src="/images/Render4.png"
+          src="/images/RoofArea.png"
           width="50%"
           display="block"
           marginLeft="auto"
