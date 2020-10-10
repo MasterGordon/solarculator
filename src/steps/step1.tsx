@@ -1,12 +1,15 @@
-import React, { useState } from "react";
-import { Flex, Box, Image } from "rebass";
-import BigButton from "../components/BigButton";
-import Heading from "../components/Topic";
-import InputField from "../components/InputField";
-import lang from "../resources/lang.json";
+import React, { useState } from 'react'
+import { Flex, Box, Image } from 'rebass'
+import BigButton from '../components/BigButton'
+import Heading from '../components/Topic'
+import InputField from '../components/InputField'
+import lang from '../resources/lang.json'
+import config from '../config.json'
+import { observer } from 'mobx-react-lite'
+import SolarCulator from '../logic/solarculator'
 
-function Step1() {
-  const [selected, setSelected] = useState(0);
+const Step1 = observer(({ solarculator }: { solarculator: SolarCulator }) => {
+  const [selected, setSelected] = useState(0)
   return (
     <>
       <Heading variation="large">{lang.step1.headline}</Heading>
@@ -16,14 +19,19 @@ function Step1() {
           height="175px"
           selected={selected}
           index={1}
-          onClick={() => setSelected(1)}
+          onClick={() => {
+            setSelected(1)
+            solarculator.setPowerUsagePerYear(
+              config.defaultValues.powerUsage.germany['1PersonkWh'],
+            )
+          }}
         >
           <Box height="90%">
             <Image
               css={{
-                position: "relative",
-                top: "50%",
-                transform: "translate(0, -50%)",
+                position: 'relative',
+                top: '50%',
+                transform: 'translate(0, -50%)',
               }}
               src="/images/OnePerson.png"
             />
@@ -34,14 +42,19 @@ function Step1() {
           height="175px"
           selected={selected}
           index={2}
-          onClick={() => setSelected(2)}
+          onClick={() => {
+            setSelected(2)
+            solarculator.setPowerUsagePerYear(
+              config.defaultValues.powerUsage.germany['23PersonkWh'],
+            )
+          }}
         >
           <Box height="90%">
             <Image
               css={{
-                position: "relative",
-                top: "50%",
-                transform: "translate(0, -50%)",
+                position: 'relative',
+                top: '50%',
+                transform: 'translate(0, -50%)',
               }}
               src="/images/TwoPersons.png"
             />
@@ -52,14 +65,19 @@ function Step1() {
           height="175px"
           selected={selected}
           index={3}
-          onClick={() => setSelected(3)}
+          onClick={() => {
+            setSelected(3)
+            solarculator.setPowerUsagePerYear(
+              config.defaultValues.powerUsage.germany['45PersonkWh'],
+            )
+          }}
         >
           <Box height="90%">
             <Image
               css={{
-                position: "relative",
-                top: "50%",
-                transform: "translate(0, -50%)",
+                position: 'relative',
+                top: '50%',
+                transform: 'translate(0, -50%)',
               }}
               src="/images/FourPersons.png"
             />
@@ -70,14 +88,19 @@ function Step1() {
           height="175px"
           selected={selected}
           index={4}
-          onClick={() => setSelected(4)}
+          onClick={() => {
+            setSelected(4)
+            solarculator.setPowerUsagePerYear(
+              config.defaultValues.powerUsage.germany['morekWh'],
+            )
+          }}
         >
           <Box height="90%">
             <Image
               css={{
-                position: "relative",
-                top: "50%",
-                transform: "translate(0, -50%)",
+                position: 'relative',
+                top: '50%',
+                transform: 'translate(0, -50%)',
               }}
               src="/images/MorePersons.png"
             />
@@ -88,12 +111,16 @@ function Step1() {
       <Box marginTop="1em">
         <Heading variation="medium">{lang.step1.unit}</Heading>
         <InputField
-          type={"number"}
-          onChange={() => setSelected(0)}
+          value={solarculator.powerUsagePerYear}
+          type="number"
+          onChange={(e) => {
+            setSelected(0)
+            solarculator.setPowerUsagePerYear(Number(e.target.value))
+          }}
         ></InputField>
       </Box>
     </>
-  );
-}
+  )
+})
 
-export default Step1;
+export default Step1

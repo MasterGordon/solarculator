@@ -1,0 +1,28 @@
+{
+  "goolgeMapsApiKey": "AIzaSyDX_2IYMRhUKMFsbf3SB3mfzNodh4SSLL8",
+  "defaultValues": {
+    "roofAngles": {
+      "germany": 0.3091
+    },
+    "currentPowerPrice": {
+      "germany": { "averagePrice": 0.3091, "currency": "Euro" }
+    },
+    "powerUsage": {
+      "germany": {
+        "1PersonkWh": 2200,
+        "23PersonkWh": 4200,
+        "45PersonkWh": 6400,
+        "morekWh": 8000
+      }
+    }
+  },
+  "solarPanel": {
+    "name": "Longi KR6-72",
+    "priceEuro": 1000,
+    "wattPeak": 380,
+    "efficiency": 19.2,
+    "length": 2004,
+    "width": 996
+  },
+  "batteryPack": [{ "name": "Longi idk", "wattHours": 1000 }]
+}
