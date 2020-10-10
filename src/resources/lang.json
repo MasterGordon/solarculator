@@ -37,9 +37,12 @@
         "unit": "Electricity price in Euro/kWh"
     },
     "step7": {
-        "headline": "Electricity Price",
-        "text": "Please enter the price you are currently paying",
-        "unit": "Electricity price in Euro/kWh"
+        "headline": "Success! You completed the Calculation.",
+        "performance": "The solar array will generate up to 2 kWh per year.",
+        "text": "With a solar array you can save",
+        "saving": "20000€ within 20 years",
+        "amortisation": "Amortisation",
+        "contact": "For more Information contact us."
     }
     
 }

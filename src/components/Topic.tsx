@@ -9,12 +9,14 @@ const variations = {
 const Topic: React.FC<{
   children: string;
   variation: "large" | "medium";
-}> = ({ children, variation }) => {
+  marginTop?: string;
+}> = ({ children, marginTop, variation }) => {
   return (
     <Heading
       textAlign="center"
       fontFamily="font"
       color="primary"
+      marginTop={marginTop}
       fontSize={variations[variation]}
     >
       {children}

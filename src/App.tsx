@@ -12,12 +12,13 @@ import Step7 from "./steps/step7";
 function App() {
   const [step, setStep] = useState(0);
   const steps = [
-    <Step7></Step7>,
+    <Step1></Step1>,
     <Step2></Step2>,
     <Step3></Step3>,
     <Step4></Step4>,
     <Step5></Step5>,
     <Step6></Step6>,
+    <Step7></Step7>,
   ];
   return (
     <Box maxWidth="600px" margin="auto">
@@ -30,21 +31,25 @@ function App() {
               display="block"
               backgroundColor="buttonColor"
               onClick={() => setStep(step - 1)}
+              css={{ "&:focus": { outline: "none" } }}
             >
               {lang.general.previous}
             </Button>
           </Flex>
         )}
-        <Flex width={step === 0 ? "100%" : "50%"} justifyContent="flex-end">
-          <Button
-            width="100px"
-            display="block"
-            backgroundColor="buttonColor"
-            onClick={() => setStep(step + 1)}
-          >
-            {lang.general.next}
-          </Button>
-        </Flex>
+        {step !== 6 && (
+          <Flex width={step === 0 ? "100%" : "50%"} justifyContent="flex-end">
+            <Button
+              width="100px"
+              display="block"
+              backgroundColor="buttonColor"
+              onClick={() => setStep(step + 1)}
+              css={{ "&:focus": { outline: "none" } }}
+            >
+              {lang.general.next}
+            </Button>
+          </Flex>
+        )}
       </Flex>
     </Box>
   );
