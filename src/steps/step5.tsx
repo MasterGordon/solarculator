@@ -1,10 +1,12 @@
-import React from "react";
-import { Box, Image } from "rebass";
-import Heading from "../components/Topic";
-import InputField from "../components/InputField";
-import lang from "../resources/lang.json";
+import React from 'react'
+import { Box, Image } from 'rebass'
+import Heading from '../components/Topic'
+import InputField from '../components/InputField'
+import lang from '../resources/lang.json'
+import { observer } from 'mobx-react-lite'
+import SolarCulator from '../logic/solarculator'
 
-function Step5() {
+const Step5 = observer(({ solarculator }: { solarculator: SolarCulator }) => {
   return (
     <>
       <Heading variation="large">{lang.step5.headline}</Heading>
@@ -20,10 +22,13 @@ function Step5() {
       </Box>
       <Box marginTop="1em">
         <Heading variation="medium">{lang.step5.postalCode}</Heading>
-        <InputField />
+        <InputField
+          value={solarculator.address}
+          onChange={(e) => solarculator.setAddress(e.target.value)}
+        />
       </Box>
     </>
-  );
-}
+  )
+})
 
-export default Step5;
+export default Step5

@@ -6,14 +6,15 @@ import { efficiency, globalRadiation } from './utils'
 
 export default class SolarCulator {
   public powerUsagePerYear: number = 0
-  public roofArea: number = 0
+  public roofAngle: number = 30
   public roofOrientation: number = 0
-  public roofAngle: number = 0
+  public roofArea: number = 0
   public address: string = ''
   public lng: number = 0
   public lat: number = 0
   public sunHoursPerYear: number = 0
-  public currentPowerPrice: number = 0
+  public currentPowerPrice: number =
+    config.defaultValues.currentPowerPrice.germany.averagePrice
 
   public powerOutputPerYear: number = 0
   public powerSavingPerYear: number = 0
@@ -35,6 +36,8 @@ export default class SolarCulator {
       setRoofOrientation: action,
       address: observable,
       setAddress: action,
+      currentPowerPrice: observable,
+      setCurrentPowerPrice: action,
     })
   }
 
@@ -56,6 +59,10 @@ export default class SolarCulator {
 
   setAddress(address: string) {
     this.address = address
+  }
+
+  setCurrentPowerPrice(currentPowerPrice: number) {
+    this.currentPowerPrice = currentPowerPrice
   }
 
   public async setLocation(adress: string) {

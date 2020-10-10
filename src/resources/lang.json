@@ -1,48 +1,56 @@
 {
-    "general": {
-        "next": "Next",
-        "previous": "Previous"
-    },
-    "step1": {
-        "headline": "Power Consumption",
-        "text": "How many residents live in the house.",
-        "unit": "Power consumption per year in kWh",
-        "buttons": ["1 person", "2-3 persons", "4-5 persons", "> 5 persons"]
-    },
-    "step2": {
-        "headline": "Roof Pitch",
-        "text": "Enter your houses roof type.",
-        "unit": "Roof pitch in degree",
-        "buttons": ["Flat  Roof", "Shed Roof", "Gable Roof"]
-    },
-    "step3": {
-        "headline": "Alignment",
-        "text": "Enter your houses alignment.",
-        "unit": "Alignment in degree",
-        "buttons": ["South", "Southeast", "East", "NorthEast", "North", "Northeast", "West", "Southeast"]
-    },
-    "step4": {
-        "headline": "Roof Area",
-        "text": "Input the area of your roof in square meters without windows.",
-        "unit": "Roof area in m²"
-    },
-    "step5": {
-        "headline": "Location",
-        "text": "Please enter your address or city name",
-        "postalCode": "Location"
-    },
-    "step6": {
-        "headline": "Electricity Price",
-        "text": "Please enter the price you are currently paying",
-        "unit": "Electricity price in Euro/kWh"
-    },
-    "step7": {
-        "headline": "Success! You completed the Calculation.",
-        "performance": "The solar array will generate up to 2 kWh per year.",
-        "text": "With a solar array you can save",
-        "saving": "20000€ within 20 years",
-        "amortisation": "Amortisation",
-        "contact": "For more Information contact us."
-    }
-    
+  "general": {
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "step1": {
+    "headline": "Power Consumption",
+    "text": "How many residents live in the house.",
+    "unit": "Power consumption per year in kWh",
+    "buttons": ["1 person", "2-3 persons", "4-5 persons", "> 5 persons"]
+  },
+  "step2": {
+    "headline": "Roof Pitch",
+    "text": "Enter your houses roof type.",
+    "unit": "Roof pitch in degree",
+    "buttons": ["Flat  Roof", "Shed Roof", "Gable Roof"]
+  },
+  "step3": {
+    "headline": "Alignment",
+    "text": "Enter your houses alignment.",
+    "unit": "Alignment in degree",
+    "buttons": [
+      "North",
+      "NorthEast",
+      "East",
+      "SouthEast",
+      "South",
+      "SouthWest",
+      "West",
+      "NorthWest"
+    ]
+  },
+  "step4": {
+    "headline": "Roof Area",
+    "text": "Input the area of your roof in square meters without windows.",
+    "unit": "Roof area in m²"
+  },
+  "step5": {
+    "headline": "Location",
+    "text": "Please enter your address or city name",
+    "postalCode": "Location"
+  },
+  "step6": {
+    "headline": "Electricity Price",
+    "text": "Please enter the price you are currently paying",
+    "unit": "Electricity price in Euro/kWh"
+  },
+  "step7": {
+    "headline": "Success! You completed the Calculation.",
+    "performance": "The solar array will generate up to 2 kWh per year.",
+    "text": "With a solar array you can save",
+    "saving": "20000€ within 20 years",
+    "amortisation": "Amortisation",
+    "contact": "For more Information contact us."
+  }
 }
