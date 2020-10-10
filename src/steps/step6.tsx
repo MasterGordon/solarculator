@@ -11,7 +11,7 @@ function Step6() {
       <Heading variation="medium">{lang.step6.text}</Heading>
       <Box marginTop="1em">
         <Heading variation="medium">{lang.step6.unit}</Heading>
-        <InputField type={"number"}></InputField>
+        <InputField type={"number"} />
       </Box>
     </>
   );

@@ -20,22 +20,14 @@ function Step2() {
           <Image src="/images/Render3.png" />
           {lang.step2.buttons[1]}
         </BigButton>
-        <BigButton
-          selected={selected}
-          margin={"auto"}
-          index={3}
-          onClick={() => setSelected(3)}
-        >
+        <BigButton selected={selected} index={3} onClick={() => setSelected(3)} margin={"auto"}>
           <Image src="/images/Render2.png" />
           {lang.step2.buttons[2]}
         </BigButton>
       </Flex>
       <Box marginTop="1em">
         <Heading variation="medium">{lang.step2.unit}</Heading>
-        <InputField
-          type={"number"}
-          onChange={() => setSelected(0)}
-        ></InputField>
+        <InputField type={"number"} onChange={() => setSelected(0)} />
       </Box>
     </>
   );

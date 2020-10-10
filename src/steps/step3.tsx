@@ -24,25 +24,22 @@ function Step3() {
         <BigButton selected={selected} index={4} onClick={() => setSelected(4)}>
           {lang.step3.buttons[3]}
         </BigButton>
-        <BigButton selected={selected} index={5} onClick={() => setSelected(4)}>
+        <BigButton selected={selected} index={5} onClick={() => setSelected(5)}>
           {lang.step3.buttons[4]}
         </BigButton>
-        <BigButton selected={selected} index={6} onClick={() => setSelected(4)}>
+        <BigButton selected={selected} index={6} onClick={() => setSelected(6)}>
           {lang.step3.buttons[5]}
         </BigButton>
-        <BigButton selected={selected} index={7} onClick={() => setSelected(4)}>
+        <BigButton selected={selected} index={7} onClick={() => setSelected(7)}>
           {lang.step3.buttons[6]}
         </BigButton>
-        <BigButton selected={selected} index={8} onClick={() => setSelected(4)}>
+        <BigButton selected={selected} index={8} onClick={() => setSelected(8)}>
           {lang.step3.buttons[7]}
         </BigButton>
       </Flex>
       <Box marginTop="1em">
         <Heading variation="medium">{lang.step3.unit}</Heading>
-        <InputField
-          type={"number"}
-          onChange={() => setSelected(0)}
-        ></InputField>
+        <InputField type={"number"} onChange={() => setSelected(0)} />
       </Box>
     </>
   );
