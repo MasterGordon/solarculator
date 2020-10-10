@@ -1,0 +1,42 @@
+{
+    "general": {
+        "next": "Next",
+        "previous": "Previous"
+    },
+    "step1": {
+        "headline": "Power consumption",
+        "text": "Wie viel Strom verbrauchen Sie pro Jahr?",
+        "unit": "Power consumption per year in kWh",
+        "buttons": ["1 person", "2-3 persons", "4-5 persons", "> 5 persons"]
+    },
+    "step2": {
+        "headline": "Roof Pitch",
+        "text": "Geben sie die Neigung Ihres Dachs an.",
+        "unit": "Roof Pitch per year in Degree",
+        "buttons": ["Flachdach", "Schrägdach", "Spitzdach"]
+    },
+    "step3": {
+        "headline": "Alignment",
+        "text": "Geben sie die Ausrichtung Ihres Dachs an.",
+        "unit": "Alignment in Degree",
+        "buttons": ["South", "West", "East", "North", "South/West", "South/East", "North/West", "North/East"]
+    },
+    "step4": {
+        "headline": "Roofage",
+        "text": "Geben sie die Fläche Ihres Dachs an ohne fenster.",
+        "unit": "Roofage in square meter"
+    },
+    "step5": {
+        "headline": "Hours of Sun",
+        "text": "Geben sie Ihre Postleitzahl an",
+        "postalCode": "Postal Code"
+    },
+    "step6": {
+        "headline": "Electricity Price",
+        "text": "Geben sie Ihren jetzigen Strompreis an",
+        "unit": "Electricity Price per kWh",
+        "standardPrice": "30,80c"
+    }
+    
+
+}
