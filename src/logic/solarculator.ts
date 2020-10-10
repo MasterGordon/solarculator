@@ -7,6 +7,5 @@ export default class SolarCulator {
   @observable public roofAngle: number = 0;
   @observable public longditude: number = 0;
   @observable public latitude: number = 0;
-  @observable public consumtionTime: "tagsüber" | "unknown" = "unknown";
   @observable public currentPowerPrice: number = 0;
 }
