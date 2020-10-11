@@ -11,9 +11,10 @@
     "buttons": ["1 person", "2-3 persons", "4-5 persons", "> 5 persons"]
   },
   "step2": {
-    "headline": "Roof Pitch",
-    "text": "Enter your houses roof type.",
-    "unit": "Roof pitch in degree",
+    "headlineType": "Roof Type",
+    "headlinePitch": "Roof Pitch",
+    "textType": "Enter your houses roof type.",
+    "textPitch": "Enter your roof pitch in degree",
     "buttons": ["Flat  Roof", "Shed Roof", "Gable Roof"]
   },
   "step3": {

@@ -11,7 +11,7 @@ const BigButton: React.FC<{
 }> = ({ children, selected, index, onClick, margin, height }) => {
   const theme = useTheme() as any;
   return (
-    <Box p={[1, 2]} width={0.5} margin={margin} onClick={onClick}>
+    <Box p={[1, 2]} width={0.5} margin={margin} onClick={onClick} css={{ cursor: "pointer" }}>
       <Text
         margin={["0.5em", "0.75em"]}
         height={height}

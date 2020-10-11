@@ -35,7 +35,7 @@ function App() {
               display="block"
               backgroundColor="buttonColor"
               onClick={() => setStep(step - 1)}
-              css={{ "&:focus": { outline: "none" } }}
+              css={{ cursor: "pointer", "&:focus": { outline: "none" } }}
             >
               {lang.general.previous}
             </Button>
@@ -51,7 +51,7 @@ function App() {
                 if (step === 5) await solarCulator.calculate();
                 setStep(step + 1);
               }}
-              css={{ "&:focus": { outline: "none" } }}
+              css={{ cursor: "pointer", "&:focus": { outline: "none" } }}
             >
               {step === 5 ? lang.general.submit : lang.general.next}
             </Button>

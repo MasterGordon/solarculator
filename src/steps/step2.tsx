@@ -10,8 +10,8 @@ import SolarCulator from "../logic/solarculator";
 const Step2 = observer(({ solarculator }: { solarculator: SolarCulator }) => {
   return (
     <>
-      <Heading variation="large">{lang.step2.headline}</Heading>
-      <Heading variation="medium">{lang.step2.text}</Heading>
+      <Heading variation="large">{lang.step2.headlineType}</Heading>
+      <Heading variation="medium">{lang.step2.textType}</Heading>
       <Flex flexWrap="wrap" mx={-2} marginTop="1em">
         <BigButton
           selected={solarculator.roofType}
@@ -46,7 +46,8 @@ const Step2 = observer(({ solarculator }: { solarculator: SolarCulator }) => {
         </BigButton>
       </Flex>
       <Box marginTop="1em">
-        <Heading variation="medium">{lang.step2.unit}</Heading>
+        <Heading variation="large">{lang.step2.headlinePitch}</Heading>
+        <Heading variation="medium">{lang.step2.textPitch}</Heading>
         <InputField
           value={solarculator.roofAngle}
           type={"number"}
