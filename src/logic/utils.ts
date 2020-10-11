@@ -9,38 +9,41 @@ const efficiencyData = [
   [88, 87, 86, 85, 82, 79, 76, 72, 68, 70, 58, 54, 49, 44, 39, 35, 32, 29, 28],
   [80, 79, 78, 77, 75, 72, 68, 65, 61, 56, 51, 47, 42, 37, 33, 29, 26, 24, 23],
   [69, 69, 69, 67, 65, 63, 60, 56, 53, 48, 44, 40, 35, 31, 27, 24, 21, 19, 18],
-]
+];
 
 const globalRadiationData = {
-  '-90': 50,
-  '-80': 80,
-  '-70': 110,
-  '-60': 145,
-  '-50': 185,
-  '-40': 225,
-  '-30': 265,
-  '-20': 295,
-  '-10': 315,
-  '0': 320,
-  '10': 315,
-  '20': 300,
-  '30': 275,
-  '40': 235,
-  '50': 180,
-  '60': 130,
-  '70': 90,
-  '80': 60,
-  '90': 45,
-}
+  "0": 1600,
+  "10": 1575,
+  "20": 1500,
+  "30": 1375,
+  "40": 1175,
+  "50": 900,
+  "60": 650,
+  "70": 450,
+  "80": 300,
+  "90": 225,
+  "-10": 1575,
+  "-20": 1475,
+  "-30": 1325,
+  "-40": 1125,
+  "-50": 925,
+  "-60": 725,
+  "-70": 550,
+  "-80": 400,
+  "-90": 250,
+};
 
 const efficiency = (angle: number, orientation: number): number => {
-  return efficiencyData[angle / 10][orientation / 10]
-}
+  const eff = efficiencyData[Math.round(angle / 10)][Math.round(orientation / 10)];
+  console.log(eff);
+  return eff;
+};
 
 const globalRadiation = (lat: number): number => {
-  const latString = String(Math.round(lat))
+  const latString = String(Math.round(lat / 10) * 10);
+  console.log("latString" + latString);
   // @ts-ignore
-  return globalRadiationData[latString]
-}
+  return globalRadiationData[latString];
+};
 
-export { efficiency, globalRadiation }
+export { efficiency, globalRadiation };

@@ -1,7 +1,8 @@
 {
   "general": {
     "next": "Next",
-    "previous": "Previous"
+    "previous": "Previous",
+    "submit": "submit"
   },
   "step1": {
     "headline": "Power Consumption",
@@ -47,9 +48,9 @@
   },
   "step7": {
     "headline": "Success! You completed the Calculation.",
-    "performance": "The solar array will generate up to 2 kWh per year.",
+    "performance": "The solar array will generate up to {powerOutputPerYear} kWh per year.",
     "text": "With a solar array you can save",
-    "saving": "20000€ within 20 years",
+    "saving": "{totalMoneySaving}€ within 20 years",
     "amortisation": "Amortisation",
     "contact": "For more Information contact us."
   }
