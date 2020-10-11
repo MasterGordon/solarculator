@@ -1,3 +1,13 @@
+# SolarCulator
+
+## Api we use
+https://developers.google.com/maps/documentation/geocoding/overview
+https://re.jrc.ec.europa.eu/pvg_tools/en/
+
+## Try now
+
+https://solarculator.online/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
